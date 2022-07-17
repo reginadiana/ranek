@@ -1,30 +1,91 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app__container">
+    <TheHeader />
+    <main class="main__container"><router-view /></main>
+    <TheFooter />
   </div>
-  <router-view />
 </template>
 
+<script>
+import TheHeader from "@/components/TheHeader";
+import TheFooter from "@/components/TheFooter";
+
+export default {
+  name: "App",
+  components: {
+    TheHeader,
+    TheFooter,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Reset styled */
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  color: #345;
+  background: url("./assets/pattern.svg") repeat top;
+}
+
+a {
+  color: #345;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* End Reset styled */
+
+/* Global styled */
+.btn {
+  display: block;
+  padding: 10px 30px;
+  background-color: #87f; /* Roxo */
+  border-radius: 4px;
+  color: #fff;
   text-align: center;
-  color: #2c3e50;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  transition: all 0.3;
+  border: none;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  cursor: pointer;
 }
 
-#nav {
-  padding: 30px;
+.btn:hover {
+  background-color: #66d;
+  transform: scale(1.1);
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.app__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.main__container {
+  flex: 1;
 }
+/* End Global styled */
 </style>

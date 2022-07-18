@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "id": "diana@email.com",
+      "email": "diana@email.com",
+      "name": "Diana Regina",
+      "passowrd": "senha123",
+      "address": "Rua Logo Ali",
+      "cep": "12356",
+      "number": "25",
+      "state": "SP",
+      "city": "Santo André"
+    }
+  ],
+  "product": [
+    {
+      "id": "notebook",
+      "name": "Notebook",
+      "user_id": "diana@email.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo notebook",
+      "photos": null
+    }
+  ]
+}

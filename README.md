@@ -39,3 +39,10 @@ npm run serve
 http://localhost:8080/
 
 docker-compose down
+
+## Executando json serve
+
+A execução do json serve é necessária para habilitar a resposta mock dos endpoints. No momento vamos rodar esse comando na máquina, dentro do
+diretório raíz do projeto.
+
+npx json-server db.json --watch

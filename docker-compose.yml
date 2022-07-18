@@ -12,3 +12,16 @@ services:
       - "8080:8080"
     environment:
       - NODE_ENV=development
+  json-server:
+    container_name: dockerized-json-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: codfish/json-server
+    command: npm run server
+    ports:
+      - "8080:4000"
+    volumes:
+      - ./db.js:/app/db.js:delegated
+    environment:
+      - NODE_ENV=development

@@ -1,21 +1,21 @@
 <template>
   <section>
     <h1>Compre ou venda</h1>
-    <ProdutosBuscar />
-    <ProdutosLista />
+    <ProductsSearch />
+    <ProductsList />
   </section>
 </template>
 
 <script>
-import ProdutosBuscar from "@/components/ProdutosBuscar";
-import ProdutosLista from "@/components/ProdutosLista";
+import ProductsSearch from "@/components/ProductsSearch";
+import ProductsList from "@/components/ProductsList";
 
 export default {
   name: "Home",
 
   components: {
-    ProdutosBuscar,
-    ProdutosLista,
+    ProductsSearch,
+    ProductsList,
   },
 };
 </script>

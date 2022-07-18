@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "ProdutosBuscar",
+  name: "ProductsSearch",
 };
 </script>
 
